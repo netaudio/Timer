@@ -23,14 +23,19 @@ static void get_format_time(char *tstr)
     return;
 }
 
+TMR_handle_t hdl;
 
+int i = 0;
 uint16_t pfnCallback1(TMR_handle_t handle, void *arg)
 {
-    
+    i++;
     time_t t;
     time(&t);
     printf("time now:%ld\n",t);
-
+    if (i > 3)
+    {
+        TMR_CancleTimer(hdl);
+    }
     
     
     return (1);
@@ -42,7 +47,7 @@ int main(void)
     char tstr[200];
     int ret;
     
-    TMR_handle_t hdl;
+    
 
     TMR_Init();
     gettimeofday(&nowtime, NULL);
