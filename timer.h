@@ -3,6 +3,16 @@
 
 #include <stdint.h>
 
+typedef int bool_t; 
+
+#ifndef FALSE
+#define FALSE 0
+#endif
+
+#ifndef TRUE
+#define TRUE 1
+#endif
+
 #define TMR_CFG_MAX_TIMER_CNT           (20u)
 #define TMR_CFG_INVALID_HANDLE          (TMR_CFG_MAX_TIMER_CNT)
 

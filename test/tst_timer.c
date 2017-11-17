@@ -116,8 +116,8 @@ int main(void)
         }
 
     }
-    uint32_t errornum = TMR_ReturnErrorNum();
-    printf("%d, %ld\n", call_cnt[0], errornum, (float)errornum / call_cnt[0] *100);
+    // uint32_t errornum = TMR_ReturnErrorNum();
+    // printf("%d, %ld\n", call_cnt[0], errornum, (float)errornum / call_cnt[0] *100);
     
     return 0;
 }
